@@ -1,4 +1,4 @@
-# To first work with this image pull this repo using 
+# To first work with this pull the repo using 
 `git clone https://github.com/seif-138/OSTask.git`
 
 # Convert Dockerfile to image:
