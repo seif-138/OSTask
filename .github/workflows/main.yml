@@ -19,9 +19,9 @@ jobs:
         run: ls      
 
       - name: " login to dockerhub"
-        run: docker login --username ${{ secrets.DOCUSERNAME}} --password ${{ secrets.DOCPASS }}
+        run: docker login --username ${{ secrets.DOCUSERNAME}} --password ${{ secrets.DOCPASS}}
 
       - name: " building docker "
-        run: docker build -t ${{ secrets.DOCKERUSERNAME}}/TaskByActions .
+        run: docker build -t ${{ secrets.DOCUSERNAME}}/TaskByActions .
       - name: " pushing to docker hub "
-        run: docker push ${{ secrets.DOCKERUSERNAME}}/TaskByActions
+        run: docker push ${{ secrets.DOCUSERNAME}}/TaskByActions
