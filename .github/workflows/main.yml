@@ -24,7 +24,10 @@ jobs:
           username: ${{ secrets.DOCUSERNAME }}
           password: ${{ secrets.DOCPASS }}
 
-      - name: " building docker "
-        run: docker buildx build -t ${{ secrets.DOCUSERNAME}}/TaskByActions .
-      - name: " pushing to docker hub "
-        run: docker push ${{ secrets.DOCUSERNAME}}/TaskByActions
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: ${{ secrets.DOCUSERNAME}}/TaskByActions
+
