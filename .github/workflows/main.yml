@@ -22,7 +22,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCUSERNAME }}
-          password: ${{ secrets.DOCPASS }}
+          password: ${{ secrets.DOCTOCKEN }}
 
       - name: Build and push
         id: docker_build
