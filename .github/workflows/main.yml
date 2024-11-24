@@ -25,6 +25,6 @@ jobs:
           password: ${{ secrets.DOCPASS }}
 
       - name: " building docker "
-        run: docker build -t ${{ secrets.DOCUSERNAME}}/TaskByActions .
+        run: docker buildx build -t ${{ secrets.DOCUSERNAME}}/TaskByActions .
       - name: " pushing to docker hub "
         run: docker push ${{ secrets.DOCUSERNAME}}/TaskByActions
